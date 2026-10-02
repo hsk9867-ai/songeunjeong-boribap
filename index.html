@@ -4,252 +4,310 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1972 송은정 보리밥 본점</title>
-<meta name="description" content="세종 조치원 보리밥 한상차림. 보리밥과 찌개, 18가지 찬, 무제한 셀프바. 매일 09:30부터 아침식사 가능.">
+<meta name="description" content="블루리본 서베이 2026 선정. 세종 조치원 보리밥 한상차림. 보리밥과 찌개, 18가지 찬, 무제한 셀프바. 매일 09:30부터 아침식사 가능.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700&display=swap">
 <style>
-/* 레이아웃: 삼베 식탁보 위에 놋그릇을 올린 한 상. 사진 배경색과 페이지 바탕을 맞추고, 안내 정보는 호두나무 쟁반색 띠에 담는다. */
+/* 레이아웃: 짙은 숯색 머리띠와 가운데 문장(紋章), 화면 폭을 다 쓰는 음식 사진 띠와 가운데 정렬 글 띠를 번갈아 쌓는다. */
 :root {
-  --linen: #ebe4d9;        /* 식탁보 */
-  --linen-deep: #ddd2c2;
-  --walnut: #2a1e17;       /* 쟁반, 본문 글자 */
-  --walnut-soft: #5d4c40;
-  --brass: #8f6f24;        /* 놋그릇 */
-  --brass-light: #d9bd77;
-  --gochu: #a8321f;        /* 고추장 */
-  --line: rgba(42, 30, 23, .18);
-  --display: "Hahmlet", "Nanum Myeongjo", "Batang", serif;
-  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --wrap: 1120px;
+  --char: #262422;         /* 머리·바닥 띠 */
+  --char-soft: #3a3734;
+  --paper: #f3efe7;        /* 글 띠 바탕 */
+  --white: #ffffff;
+  --ink: #2b2927;
+  --ink-soft: #6b6660;
+  --barley: #6f8a34;       /* 보리 초록: 강조 */
+  --barley-dark: #5a7129;
+  --ribbon: #1d4fa0;       /* 블루리본 */
+  --ribbon-dark: #153a78;
+  --line: rgba(43, 41, 39, .16);
+  --head: "Gothic A1", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --quote: "Nanum Myeongjo", "Batang", serif;
+  --wrap: 1080px;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--linen);
-  color: var(--walnut);
-  font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.75;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--head);
+  font-size: 16.5px;
+  line-height: 1.8;
   word-break: keep-all;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; height: auto; display: block; }
-.wrap > *, .cols > *, .mains > * { min-width: 0; }
 a { color: inherit; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
-h1, h2, h3 { font-family: var(--display); line-height: 1.25; margin: 0; text-wrap: balance; }
+a:focus-visible { outline: 3px solid var(--barley); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; line-height: 1.3; text-wrap: balance; }
 p { margin: 0; }
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: 20px; }
+.wrap > *, .cols > *, .mains > * { min-width: 0; }
 .num { font-variant-numeric: tabular-nums; }
 
-/* 머리 */
-.top {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(235, 228, 217, .94);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-}
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-.brand { font-family: var(--display); font-weight: 800; font-size: 1.1rem; text-decoration: none; white-space: nowrap; }
-.brand span { color: var(--brass); margin-right: .3em; }
-.nav { display: flex; align-items: center; gap: 22px; font-size: .95rem; }
-.nav a { text-decoration: none; }
-.nav a:hover { color: var(--brass); }
-.nav .links { display: flex; gap: 22px; }
 .btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: .7em 1.3em; border: 1px solid var(--walnut);
-  font-weight: 600; text-decoration: none; font-size: .98rem;
-  transition: background .15s, color .15s;
+  display: inline-block; padding: .75em 1.6em;
+  font-weight: 700; font-size: .88rem; letter-spacing: .12em;
+  text-decoration: none; text-align: center;
+  background: var(--char); color: var(--white); border: 1px solid var(--char);
+  transition: background .15s, border-color .15s, color .15s;
 }
-.btn.fill { background: var(--walnut); color: var(--linen); }
-.btn.fill:hover { background: var(--brass); border-color: var(--brass); }
-.btn:hover { background: var(--walnut); color: var(--linen); }
-.btn.small { padding: .45em 1em; font-size: .9rem; }
+.btn:hover { background: var(--barley); border-color: var(--barley); }
+.btn.green { background: var(--barley); border-color: var(--barley); }
+.btn.green:hover { background: var(--barley-dark); border-color: var(--barley-dark); }
+.btn.ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.btn.ghost:hover { background: var(--white); color: var(--char); border-color: var(--white); }
 
-/* 첫 화면 */
-.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; padding-block: 64px 72px; }
-.ribbon { display: inline-block; font-size: .85rem; font-weight: 600; letter-spacing: .04em; color: var(--brass); border-block: 1px solid var(--brass); padding: .3em 0; margin-bottom: 26px; }
-.hero h1 { font-size: clamp(2.3rem, 5.4vw, 4.1rem); font-weight: 800; letter-spacing: -.02em; }
-.hero h1 em { font-style: normal; color: var(--brass); }
-.hero .lede { margin-top: 24px; max-width: 30em; color: var(--walnut-soft); font-size: 1.08rem; }
-.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
-.hero .now { margin-top: 26px; font-size: .95rem; color: var(--walnut-soft); }
-.hero .now b { color: var(--walnut); font-weight: 600; }
-.hero figure { margin: 0; }
-.hero figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 70%; }
+/* 머리띠 */
+.top { background: var(--char); color: var(--white); }
+.top .bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding-block: 18px 10px; }
+.top .side { font-size: .82rem; letter-spacing: .06em; }
+.top .side a { text-decoration: none; display: inline-block; padding: .35em 1em; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; white-space: nowrap; }
+.top .side a:hover { background: var(--white); color: var(--char); }
+.top .side.right { text-align: right; }
+.crest { text-decoration: none; text-align: center; border: 2px solid var(--white); padding: 8px 20px 9px; position: relative; display: block; }
+.crest::before { content: ""; position: absolute; inset: 3px; border: 1px solid rgba(255,255,255,.45); pointer-events: none; }
+.crest small { display: block; font-size: .7rem; letter-spacing: .5em; text-indent: .5em; line-height: 1.4; color: #cfd8b8; }
+.crest b { display: block; font-weight: 900; font-size: 1.3rem; letter-spacing: .14em; text-indent: .14em; line-height: 1.25; }
+.crest i { display: block; font-style: normal; font-size: .62rem; letter-spacing: .4em; text-indent: .4em; line-height: 1.5; opacity: .8; }
+.nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 34px; padding-block: 8px 16px; font-size: .86rem; font-weight: 700; letter-spacing: .18em; }
+.nav a { text-decoration: none; padding: 2px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { border-bottom-color: var(--barley); }
 
-/* 한 상 구성 */
-.sang { border-block: 1px solid var(--line); }
-.sang ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
-.sang li { padding: 30px 22px; border-left: 1px solid var(--line); }
-.sang li:first-child { border-left: 0; padding-left: 0; }
-.sang b { display: block; font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 1.2; color: var(--brass); }
-.sang span { display: block; margin-top: 6px; font-size: .95rem; color: var(--walnut-soft); }
+/* 첫 화면: 사진 띠 */
+.hero { position: relative; background: var(--char); color: var(--white); }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 78%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,18,16,.82) 0%, rgba(20,18,16,.6) 42%, rgba(20,18,16,.12) 78%); }
+.hero .wrap { position: relative; z-index: 1; padding-block: 84px 92px; }
+.hero .inner { max-width: 560px; }
+.award { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+.award svg { width: 78px; height: auto; flex: none; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); }
+.award b { display: block; font-weight: 900; font-size: 1.15rem; letter-spacing: .04em; line-height: 1.4; }
+.award div > span { display: block; font-size: .88rem; opacity: .88; line-height: 1.5; }
+.hero h1 { font-weight: 900; font-size: clamp(2.1rem, 5vw, 3.5rem); letter-spacing: .02em; line-height: 1.25; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.hero p.lede { margin-top: 20px; font-size: 1.05rem; opacity: .92; max-width: 28em; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
+/* 맛집 인증 띠 */
+.proof { background: var(--ribbon); color: var(--white); }
+.proof ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.proof li { padding: 22px 16px; text-align: center; border-left: 1px solid rgba(255,255,255,.22); }
+.proof li:first-child { border-left: 0; }
+.proof b { display: block; font-weight: 900; font-size: 1.2rem; letter-spacing: .04em; line-height: 1.4; }
+.proof li > span { display: block; font-size: .85rem; opacity: .85; line-height: 1.5; }
+
+/* 글 띠 공통 */
 section { padding-block: 84px; }
-.sec-head { margin-bottom: 40px; max-width: 34em; }
-.sec-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; letter-spacing: -.01em; }
-.sec-head p { margin-top: 14px; color: var(--walnut-soft); }
+.center { text-align: center; }
+.eyebrow-title { font-weight: 900; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: .16em; text-indent: .16em; }
+.rule { width: 44px; height: 3px; background: var(--barley); margin: 18px auto 0; }
+.quote { font-family: var(--quote); font-size: 1.25rem; color: var(--ink); margin-top: 26px; }
+.lead { max-width: 38em; margin: 16px auto 0; color: var(--ink-soft); }
 
-/* 소개 */
-.about .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
-.about img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.about .points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; }
-.about .points li { padding: 14px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 7.5em 1fr; gap: 16px; }
-.about .points li b { font-family: var(--display); font-weight: 600; }
-.about .points li span { color: var(--walnut-soft); }
+/* 우리의 밥상 */
+.believe { background: var(--paper); }
+.points { list-style: none; margin: 52px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
+.points b { display: block; font-weight: 900; font-size: 1.05rem; letter-spacing: .2em; text-indent: .2em; color: var(--barley-dark); }
+.points span { display: block; margin-top: 8px; font-size: .93rem; color: var(--ink-soft); line-height: 1.7; }
+.points li { padding-top: 22px; border-top: 1px solid var(--line); }
+
+/* 사진 띠 */
+.band { position: relative; background: var(--char); color: var(--white); padding: 0; }
+.band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(20,18,16,.85) 0%, rgba(20,18,16,.55) 45%, rgba(20,18,16,.1) 80%); }
+.band .wrap { position: relative; z-index: 1; padding-block: 92px; display: flex; justify-content: flex-end; }
+.band .inner { max-width: 420px; text-align: right; }
+.band h2 { font-weight: 900; font-size: clamp(1.6rem, 3.6vw, 2.3rem); letter-spacing: .04em; }
+.band p { margin-top: 12px; opacity: .9; }
+.band .btn { margin-top: 24px; }
 
 /* 메뉴 */
-.menu { background: var(--linen-deep); }
-.mains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.mains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 52px; text-align: center; }
 .dish img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.dish h3 { font-size: 1.25rem; font-weight: 800; margin-top: 16px; }
-.dish .price { font-family: var(--display); font-weight: 600; color: var(--gochu); margin-top: 4px; }
-.dish p.desc { margin-top: 8px; font-size: .95rem; color: var(--walnut-soft); }
-.dish .tag { font-family: var(--body); font-size: .78rem; font-weight: 600; color: var(--brass); border: 1px solid var(--brass); padding: .1em .55em; margin-left: .5em; vertical-align: .2em; white-space: nowrap; }
-.sub-title { font-family: var(--display); font-size: 1.3rem; font-weight: 800; margin: 64px 0 8px; }
-.sides { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 48px; }
-.sides li { display: grid; grid-template-columns: 84px 1fr auto; gap: 18px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
-.sides img { width: 84px; height: 84px; object-fit: cover; }
-.sides .name { font-family: var(--display); font-weight: 600; font-size: 1.08rem; }
-.sides .note { display: block; font-family: var(--body); font-weight: 400; font-size: .88rem; color: var(--walnut-soft); line-height: 1.5; margin-top: 2px; }
-.sides .price { font-family: var(--display); font-weight: 600; color: var(--gochu); white-space: nowrap; }
-.menu .fine { margin-top: 26px; font-size: .9rem; color: var(--walnut-soft); }
+.dish h3 { font-size: 1.15rem; font-weight: 900; letter-spacing: .06em; margin-top: 18px; }
+.dish .tag { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: var(--barley-dark); border: 1px solid var(--barley); padding: .1em .55em; margin-left: .5em; vertical-align: .15em; white-space: nowrap; }
+.dish .price { font-weight: 700; color: var(--barley-dark); margin-top: 2px; }
+.dish p.desc { margin-top: 6px; font-size: .92rem; color: var(--ink-soft); line-height: 1.65; }
+.sub-title { font-weight: 900; font-size: 1.05rem; letter-spacing: .3em; text-indent: .3em; text-align: center; margin: 68px 0 14px; }
+.sides { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 48px; border-top: 1px solid var(--line); }
+.sides li { display: grid; grid-template-columns: 76px 1fr auto; gap: 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.sides img { width: 76px; height: 76px; object-fit: cover; border-radius: 50%; }
+.sides .name { font-weight: 700; font-size: 1.02rem; }
+.sides .note { display: block; font-weight: 400; font-size: .86rem; color: var(--ink-soft); line-height: 1.5; }
+.sides .price { font-weight: 700; color: var(--barley-dark); white-space: nowrap; }
+.fine { margin-top: 24px; font-size: .88rem; color: var(--ink-soft); text-align: center; }
 
 /* 손님 평가 */
-.voice .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
-.score { font-family: var(--display); font-weight: 800; font-size: 4.2rem; line-height: 1; color: var(--brass); }
-.score small { font-size: 1.2rem; color: var(--walnut-soft); font-weight: 400; }
-.voice .src { margin-top: 14px; font-size: .9rem; color: var(--walnut-soft); }
-.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.voice { background: var(--paper); }
+.voice .cols { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; margin-top: 48px; }
+.score { font-weight: 900; font-size: 4.4rem; line-height: 1; color: var(--ribbon); text-align: center; }
+.score small { font-size: 1.2rem; color: var(--ink-soft); font-weight: 400; }
+.voice .src { margin-top: 14px; font-size: .88rem; color: var(--ink-soft); text-align: center; line-height: 1.7; }
+.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .bars .row { display: flex; justify-content: space-between; gap: 12px; font-weight: 500; }
-.bars .row span:last-child { color: var(--walnut-soft); font-weight: 400; }
-.bars .track { height: 8px; background: var(--linen-deep); margin-top: 8px; }
-.bars .fill { height: 100%; background: var(--brass); }
+.bars .row span:last-child { color: var(--ink-soft); font-weight: 400; }
+.bars .track { height: 8px; background: #e2dccf; margin-top: 6px; }
+.bars .fill { height: 100%; background: var(--barley); }
 
-/* 방문 안내 (쟁반색 띠) */
-.visit { background: var(--walnut); color: var(--linen); }
-.visit .sec-head p, .visit dd, .visit .notice li { color: #cfc3b3; }
-.visit .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-.visit h3 { font-size: 1.15rem; font-weight: 600; color: var(--brass-light); margin-bottom: 14px; }
-.visit dl { margin: 0; display: grid; grid-template-columns: 7em 1fr; row-gap: 10px; }
-.visit dt { font-weight: 600; }
-.visit dd { margin: 0; }
-.visit .block + .block { margin-top: 40px; }
-.notice { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.notice li { padding-left: 1.1em; position: relative; }
-.notice li::before { content: ""; position: absolute; left: 0; top: .8em; width: 6px; height: 1px; background: var(--brass-light); }
-.notice b { color: var(--linen); font-weight: 600; }
+/* 방문 안내 */
+.visit .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 52px; }
+.visit h3 { font-size: .95rem; font-weight: 900; letter-spacing: .24em; color: var(--barley-dark); padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 16px; }
+.visit dl { margin: 0; display: grid; grid-template-columns: 5.5em 1fr; row-gap: 8px; }
+.visit dt { font-weight: 700; }
+.visit dd { margin: 0; color: var(--ink-soft); }
+.notice { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; color: var(--ink-soft); }
+.notice b { color: var(--ink); font-weight: 700; }
 
 /* 오시는 길 */
-.way .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-.way address { font-style: normal; font-family: var(--display); font-weight: 600; font-size: 1.35rem; line-height: 1.5; }
-.way address small { display: block; font-family: var(--body); font-weight: 400; font-size: .92rem; color: var(--walnut-soft); }
-.near { list-style: none; margin: 26px 0 0; padding: 0; }
-.near li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); }
-.near li span:last-child { color: var(--brass); font-weight: 600; white-space: nowrap; }
-.way .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.map { border: 1px solid var(--line); }
+.way { background: var(--paper); }
+.way .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px; }
+.way address { font-style: normal; font-weight: 900; font-size: 1.3rem; line-height: 1.5; }
+.way address small { display: block; font-weight: 400; font-size: .9rem; color: var(--ink-soft); }
+.near { list-style: none; margin: 24px 0 0; padding: 0; }
+.near li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-top: 1px solid var(--line); }
+.near li span:last-child { color: var(--barley-dark); font-weight: 700; white-space: nowrap; }
+.way .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.map { border: 1px solid var(--line); background: var(--white); }
 .map iframe { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; }
 
-footer { border-top: 1px solid var(--line); padding-block: 36px 48px; font-size: .92rem; color: var(--walnut-soft); }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 40px; }
-footer strong { font-family: var(--display); color: var(--walnut); font-size: 1.05rem; }
-footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+/* 예약 띠 */
+.reserve .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+.reserve .tel { font-weight: 900; font-size: 1.6rem; letter-spacing: .04em; margin-top: 22px; }
+
+/* 바닥 */
+footer { background: var(--char); color: #d9d5cf; text-align: center; padding-top: 48px; font-size: .9rem; }
+.social { display: flex; justify-content: center; gap: 12px; }
+.social a { width: 44px; height: 44px; border-radius: 50%; background: var(--barley); color: var(--white); display: grid; place-items: center; text-decoration: none; font-weight: 900; font-size: .78rem; letter-spacing: .02em; }
+.social a:hover { background: var(--white); color: var(--char); }
+footer .fnav { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 28px; margin-top: 26px; font-weight: 700; letter-spacing: .18em; font-size: .82rem; color: var(--white); }
+footer .fnav a { text-decoration: none; }
+footer .fnav a:hover { color: #cfd8b8; }
+footer .addr { margin-top: 18px; padding-bottom: 36px; line-height: 1.8; }
+footer .greenbar { background: var(--barley); color: var(--white); padding: 12px 20px; font-size: .82rem; letter-spacing: .08em; font-weight: 700; }
 
 @media (max-width: 860px) {
-  body { font-size: 16px; }
-  .nav .links { display: none; }
-  .hero .wrap, .about .wrap, .voice .wrap, .visit .cols, .way .wrap { grid-template-columns: 1fr; gap: 36px; }
-  .hero .wrap { padding-block: 40px 48px; }
-  .hero figure img { aspect-ratio: 1 / 1; }
-  .sang ul { grid-template-columns: repeat(2, 1fr); }
-  .sang li { padding: 22px 16px; }
-  .sang li:nth-child(odd) { border-left: 0; padding-left: 0; }
-  .sang li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  body { font-size: 15.5px; }
+  .top .bar { grid-template-columns: 1fr; justify-items: center; padding-block: 16px 6px; }
+  .top .side { display: none; }
+  .nav { gap: 4px 22px; font-size: .8rem; letter-spacing: .1em; }
+  .hero .wrap { padding-block: 52px 60px; }
+  .hero::after { background: linear-gradient(180deg, rgba(20,18,16,.78) 0%, rgba(20,18,16,.6) 60%, rgba(20,18,16,.35) 100%); }
+  .award svg { width: 64px; }
+  .proof ul { grid-template-columns: 1fr; }
+  .proof li { border-left: 0; border-top: 1px solid rgba(255,255,255,.22); padding: 14px 16px; }
+  .proof li:first-child { border-top: 0; }
   section { padding-block: 60px; }
-  .mains { grid-template-columns: 1fr; gap: 36px; }
+  .points { grid-template-columns: repeat(2, 1fr); }
+  .band::after { background: rgba(20,18,16,.62); }
+  .band .wrap { justify-content: center; padding-block: 64px; }
+  .band .inner { text-align: center; }
+  .mains { grid-template-columns: 1fr; gap: 40px; }
   .sides { grid-template-columns: 1fr; }
-  .sides li { grid-template-columns: 68px 1fr auto; gap: 14px; }
-  .sides img { width: 68px; height: 68px; }
+  .sides li { grid-template-columns: 60px 1fr auto; gap: 14px; }
+  .sides img { width: 60px; height: 60px; }
+  .voice .cols, .visit .cols, .way .cols { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
 </head>
-<body>
+<body id="top">
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><span>1972</span>송은정 보리밥</a>
+    <div class="bar">
+      <div class="side"><a href="https://m.booking.naver.com/booking/6/bizes/1579162" target="_blank" rel="noopener">네이버 예약</a></div>
+      <a class="crest" href="#top" aria-label="1972 송은정 보리밥 본점">
+        <small>1972</small>
+        <b>송은정 보리밥</b>
+        <i>세종 조치원 본점</i>
+      </a>
+      <div class="side right"><a class="num" href="tel:0507-1343-0929">0507-1343-0929</a></div>
+    </div>
     <nav class="nav" aria-label="주요 메뉴">
-      <div class="links">
-        <a href="#about">소개</a>
-        <a href="#menu">메뉴</a>
-        <a href="#visit">방문 안내</a>
-        <a href="#way">오시는 길</a>
-      </div>
-      <a class="btn fill small" href="https://m.booking.naver.com/booking/6/bizes/1579162" target="_blank" rel="noopener">예약</a>
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#visit">방문 안내</a>
+      <a href="#way">오시는 길</a>
+      <a href="#reserve">예약</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
 
   <div class="hero">
+    <img src="images/hero.jpg" alt="놋그릇에 담긴 나물 반찬과 송은정 보리밥의 참기름, 들기름 병" width="1920" height="1280">
     <div class="wrap">
-      <div>
-        <span class="ribbon">블루리본 서베이 2026 · 한식대가 선정</span>
-        <h1>보리밥 한 그릇에<br><em>열여덟 가지</em> 찬.</h1>
-        <p class="lede">국내산 보리로 매일 아침 밥을 짓고, 방앗간에서 짜 온 참기름과 들기름을 상에 올립니다. 놋그릇에 담은 나물을 넣고 취향대로 비벼 드세요.</p>
-        <div class="cta">
-          <a class="btn fill" href="https://m.booking.naver.com/booking/6/bizes/1579162" target="_blank" rel="noopener">네이버로 예약</a>
-          <a class="btn" href="tel:0507-1343-0929">전화 <span class="num">&nbsp;0507-1343-0929</span></a>
+      <div class="inner">
+        <div class="award">
+          <svg viewBox="0 0 80 104" role="img" aria-label="블루리본 서베이 2026 선정">
+            <polygon points="22,58 12,102 28,92 38,104 44,62" fill="#153a78"/>
+            <polygon points="58,58 68,102 52,92 42,104 36,62" fill="#1d4fa0"/>
+            <circle cx="40" cy="40" r="38" fill="#1d4fa0"/>
+            <circle cx="40" cy="40" r="38" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 5"/>
+            <circle cx="40" cy="40" r="29" fill="#ffffff"/>
+            <text x="40" y="35" text-anchor="middle" font-family="Gothic A1, Malgun Gothic, sans-serif" font-weight="900" font-size="9.5" fill="#153a78">블루리본</text>
+            <text x="40" y="52" text-anchor="middle" font-family="Gothic A1, Malgun Gothic, sans-serif" font-weight="900" font-size="15" fill="#1d4fa0">2026</text>
+          </svg>
+          <div>
+            <b>블루리본 서베이 2026 선정</b>
+            <span>한식대가 선정 · 네이버 방문자 평점 <span class="num">4.78</span></span>
+          </div>
         </div>
-        <p class="now"><b>매일 <span class="num">09:30 – 20:30</span></b> · 쉬는 시간 <span class="num">15:30 – 17:00</span> · 아침식사 가능</p>
+        <h1>보리밥 한 그릇에<br>열여덟 가지 찬.</h1>
+        <p class="lede">국내산 보리로 매일 아침 밥을 짓고, 방앗간에서 짜 온 참기름과 들기름을 상에 올립니다.</p>
+        <div class="cta">
+          <a class="btn green" href="#menu">메뉴 보기</a>
+          <a class="btn ghost" href="#reserve">예약하기</a>
+        </div>
       </div>
-      <figure>
-        <img src="images/portrait.jpg" alt="놋그릇에 담긴 보리밥과 찌개, 고등어구이, 떡갈비, 게장, 나물 반찬이 차려진 한 상" width="750" height="1125">
-      </figure>
     </div>
   </div>
 
-  <div class="sang">
+  <div class="proof">
     <div class="wrap">
       <ul>
-        <li><b>18찬</b><span>나물, 편육, 애호박전, 잡채까지 계절 따라 바뀌는 찬</span></li>
-        <li><b>무제한 셀프바</b><span>보리밥·쌀밥과 반찬을 원하는 만큼</span></li>
-        <li><b class="num">09:30</b><span>아침식사부터 저녁까지</span></li>
-        <li><b>디저트바</b><span>원두커피, 매실차, 핫초코, 수정과 무료</span></li>
+        <li><b>블루리본 서베이 2026</b><span>올해도 선정되었습니다</span></li>
+        <li><b>한식대가</b><span>2026년 선정</span></li>
+        <li><b class="num">방문자 평점 4.78</b><span>네이버 플레이스 리뷰 <span class="num">3,927</span>건</span></li>
       </ul>
     </div>
   </div>
 
-  <section class="about" id="about">
+  <section class="believe center" id="about">
     <div class="wrap">
-      <img src="images/hansang.jpg" alt="놋그릇에 담긴 나물 반찬 뒤로 송은정 보리밥의 참기름과 들기름 병이 놓여 있다" width="750" height="500" loading="lazy">
-      <div>
-        <div class="sec-head" style="margin-bottom:0">
-          <h2>건강한 밥 한 끼,<br>정성 가득한 한상차림</h2>
-          <p>첫 숟갈에 마음이 놓이고, 마지막 반찬 한 점까지 정성이 느껴지는 밥상을 차립니다. 속 편한 한 끼가 필요한 날, 부모님을 모시고 오기 좋은 집입니다.</p>
-        </div>
-        <ul class="points">
-          <li><b>보리</b><span>100% 국내산 보리쌀. 보리밥과 쌀밥 중 골라 드실 수 있습니다.</span></li>
-          <li><b>기름</b><span>방앗간에서 직접 짜 온 참기름과 들기름을 테이블마다 둡니다.</span></li>
-          <li><b>게장</b><span>격포항에서 직송한 간장게장과 양념게장.</span></li>
-          <li><b>공간</b><span>김경희 작가의 달항아리 민화가 걸린 사랑방 같은 실내, 2층까지 좌석.</span></li>
-        </ul>
+      <h2 class="eyebrow-title">우리의 밥상</h2>
+      <div class="rule"></div>
+      <p class="quote">“건강한 밥 한 끼, 정성 가득한 한상차림”</p>
+      <p class="lead">첫 숟갈에 마음이 놓이고, 마지막 반찬 한 점까지 정성이 느껴지는 밥상을 차립니다. 속 편한 한 끼가 필요한 날, 부모님을 모시고 오기 좋은 집입니다.</p>
+      <ul class="points">
+        <li><b>보리</b><span>100% 국내산 보리쌀. 보리밥과 쌀밥 중 골라 드실 수 있습니다.</span></li>
+        <li><b>기름</b><span>방앗간에서 직접 짜 온 참기름과 들기름을 테이블마다 둡니다.</span></li>
+        <li><b>18찬</b><span>나물, 편육, 애호박전, 잡채까지. 셀프바에서 원하는 만큼 더 드세요.</span></li>
+        <li><b>공간</b><span>김경희 작가의 달항아리 민화가 걸린 사랑방 같은 실내, 2층까지 좌석.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <img src="images/band.jpg" alt="위에서 내려다본 송은정 한상차림. 놋그릇에 담긴 보리밥과 고등어구이, 떡갈비, 게장, 나물 반찬" width="1920" height="1280" loading="lazy">
+    <div class="wrap">
+      <div class="inner">
+        <h2>오늘은 어떤 상을 차려 드릴까요?</h2>
+        <p>보리밥 상마다 찌개와 18찬, 무제한 셀프바가 함께 나옵니다.</p>
+        <a class="btn green" href="#menu">메뉴 보기</a>
       </div>
     </div>
   </section>
 
-  <section class="menu" id="menu">
+  <section id="menu">
     <div class="wrap">
-      <div class="sec-head">
-        <h2>메뉴</h2>
-        <p>모든 보리밥 상에는 찌개와 18찬, 무제한 셀프바가 함께 나옵니다. 한상차림 한정식집이라 2인 이상부터 주문하실 수 있습니다.</p>
+      <div class="center">
+        <h2 class="eyebrow-title">메뉴</h2>
+        <div class="rule"></div>
+        <p class="lead">한상차림 한정식집이라 2인 이상부터 주문하실 수 있습니다.</p>
       </div>
 
       <div class="mains">
@@ -276,102 +334,105 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
       <h3 class="sub-title">곁들임</h3>
       <ul class="sides">
         <li>
-          <img src="images/godeungeo.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/godeungeo.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">고등어구이 <span class="note">1마리 · 기름기를 뺀 노르웨이산 고등어</span></span>
           <span class="price num">10,000원</span>
         </li>
         <li>
-          <img src="images/bulgogi.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/bulgogi.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">고추장불고기 <span class="note">국내산 돼지 앞다리살, 매콤 고소한 양념</span></span>
           <span class="price num">10,000원</span>
         </li>
         <li>
-          <img src="images/tteokgalbi.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/tteokgalbi.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">떡갈비 <span class="note">2장</span></span>
           <span class="price num">8,000원</span>
         </li>
         <li>
-          <img src="images/ganjang.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/ganjang.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">간장게장 <span class="note">2마리 · 격포항 직송</span></span>
           <span class="price num">27,000원</span>
         </li>
         <li>
-          <img src="images/yangnyeom.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/yangnyeom.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">양념게장 <span class="note">격포항 직송</span></span>
           <span class="price num">20,000원</span>
         </li>
         <li>
-          <img src="images/pyeonyuk.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/pyeonyuk.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">편육 <span class="note">12점</span></span>
           <span class="price num">6,000원</span>
         </li>
         <li>
-          <img src="images/jjigae-cheong.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/jjigae-cheong.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">청국장 <span class="note">추가</span></span>
           <span class="price num">2,000원</span>
         </li>
         <li>
-          <img src="images/jjigae-doen.jpg" alt="" width="84" height="84" loading="lazy">
+          <img src="images/jjigae-doen.jpg" alt="" width="76" height="76" loading="lazy">
           <span class="name">된장찌개 <span class="note">추가</span></span>
           <span class="price num">2,000원</span>
         </li>
       </ul>
-      <p class="fine">어린이 보리밥 3,000원(셀프바 포함). 가격은 2026년 5월 기준이며 매장 사정에 따라 달라질 수 있습니다.</p>
+      <p class="fine">어린이 보리밥 3,000원(셀프바 포함) · 디저트바 무료(원두커피, 매실차, 핫초코, 수정과)<br>가격은 2026년 5월 기준이며 매장 사정에 따라 달라질 수 있습니다.</p>
     </div>
   </section>
 
   <section class="voice">
     <div class="wrap">
-      <div>
-        <div class="sec-head" style="margin-bottom:24px">
-          <h2>다녀가신 분들의 평가</h2>
-        </div>
-        <p class="score num">4.78 <small>/ 5</small></p>
-        <p class="src">네이버 플레이스 방문자 리뷰 <span class="num">3,927</span>건.<br>아래는 리뷰 참여자 <span class="num">3,590</span>명이 고른 키워드입니다. (2026년 10월 2일 기준)</p>
+      <div class="center">
+        <h2 class="eyebrow-title">다녀가신 분들의 평가</h2>
+        <div class="rule"></div>
       </div>
-      <ul class="bars">
-        <li><div class="row"><span>음식이 맛있어요</span><span class="num">3,684</span></div><div class="track"><div class="fill" style="width:100%"></div></div></li>
-        <li><div class="row"><span>재료가 신선해요</span><span class="num">2,675</span></div><div class="track"><div class="fill" style="width:72.6%"></div></div></li>
-        <li><div class="row"><span>양이 많아요</span><span class="num">1,922</span></div><div class="track"><div class="fill" style="width:52.2%"></div></div></li>
-        <li><div class="row"><span>매장이 넓어요</span><span class="num">1,474</span></div><div class="track"><div class="fill" style="width:40%"></div></div></li>
-        <li><div class="row"><span>인테리어가 멋져요</span><span class="num">1,118</span></div><div class="track"><div class="fill" style="width:30.3%"></div></div></li>
-        <li><div class="row"><span>친절해요</span><span class="num">878</span></div><div class="track"><div class="fill" style="width:23.8%"></div></div></li>
-      </ul>
+      <div class="cols">
+        <div>
+          <p class="score num">4.78 <small>/ 5</small></p>
+          <p class="src">네이버 플레이스 방문자 리뷰 <span class="num">3,927</span>건<br>리뷰 참여자 <span class="num">3,590</span>명이 고른 키워드 (2026년 10월 2일 기준)</p>
+        </div>
+        <ul class="bars">
+          <li><div class="row"><span>음식이 맛있어요</span><span class="num">3,684</span></div><div class="track"><div class="fill" style="width:100%"></div></div></li>
+          <li><div class="row"><span>재료가 신선해요</span><span class="num">2,675</span></div><div class="track"><div class="fill" style="width:72.6%"></div></div></li>
+          <li><div class="row"><span>양이 많아요</span><span class="num">1,922</span></div><div class="track"><div class="fill" style="width:52.2%"></div></div></li>
+          <li><div class="row"><span>매장이 넓어요</span><span class="num">1,474</span></div><div class="track"><div class="fill" style="width:40%"></div></div></li>
+          <li><div class="row"><span>인테리어가 멋져요</span><span class="num">1,118</span></div><div class="track"><div class="fill" style="width:30.3%"></div></div></li>
+          <li><div class="row"><span>친절해요</span><span class="num">878</span></div><div class="track"><div class="fill" style="width:23.8%"></div></div></li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="visit" id="visit">
     <div class="wrap">
-      <div class="sec-head">
-        <h2>방문 안내</h2>
-        <p>점심시간에는 대기가 생길 수 있습니다. 단체나 룸 이용은 미리 예약해 주세요.</p>
+      <div class="center">
+        <h2 class="eyebrow-title">방문 안내</h2>
+        <div class="rule"></div>
+        <p class="lead">점심시간에는 대기가 생길 수 있습니다. 단체나 룸 이용은 미리 예약해 주세요.</p>
       </div>
       <div class="cols">
         <div>
-          <div class="block">
-            <h3>영업시간</h3>
-            <dl>
-              <dt>매일</dt><dd class="num">09:30 – 20:30</dd>
-              <dt>쉬는 시간</dt><dd class="num">15:30 – 17:00</dd>
-              <dt>주문 마감</dt><dd class="num">점심 15:00 · 저녁 20:00</dd>
-            </dl>
-          </div>
-          <div class="block">
-            <h3>좌석과 편의</h3>
-            <dl>
-              <dt>룸</dt><dd>8명 – 16명</dd>
-              <dt>단체석</dt><dd>8명 – 20명</dd>
-              <dt>주차</dt><dd>매장 앞 무료, 10대 이상</dd>
-              <dt>그 밖에</dt><dd>무선 인터넷 · 남녀 화장실 구분 · 휠체어로 출입 가능</dd>
-            </dl>
-          </div>
+          <h3>영업시간</h3>
+          <dl>
+            <dt>매일</dt><dd class="num">09:30 – 20:30</dd>
+            <dt>쉬는 시간</dt><dd class="num">15:30 – 17:00</dd>
+            <dt>주문 마감</dt><dd class="num">점심 15:00 · 저녁 20:00</dd>
+            <dt>아침식사</dt><dd class="num">09:30부터 가능</dd>
+          </dl>
         </div>
-        <div class="block">
+        <div>
+          <h3>좌석과 편의</h3>
+          <dl>
+            <dt>룸</dt><dd>8명 – 16명</dd>
+            <dt>단체석</dt><dd>8명 – 20명</dd>
+            <dt>주차</dt><dd>매장 앞 무료, 10대 이상</dd>
+            <dt>그 밖에</dt><dd>무선 인터넷 · 남녀 화장실 구분 · 휠체어로 출입 가능</dd>
+          </dl>
+        </div>
+        <div>
           <h3>미리 알아 두세요</h3>
           <ul class="notice">
-            <li><b>2인 이상 주문.</b> 한상차림 한정식집이라 1인 차림상은 어렵습니다.</li>
+            <li><b>2인 이상 주문.</b> 1인 차림상은 어렵습니다.</li>
             <li><b>유모차·아기의자.</b> 붙박이 좌석이 대부분이라 이용이 어렵습니다.</li>
-            <li><b>여민전.</b> 지역화폐 정책 기준에 따라 사용하실 수 없습니다.</li>
+            <li><b>여민전.</b> 정책 기준에 따라 사용하실 수 없습니다.</li>
             <li><b>주류 반입.</b> 외부 주류는 반입하실 수 없습니다.</li>
             <li><b>반려동물.</b> 동반 입장이 어렵습니다.</li>
           </ul>
@@ -382,29 +443,44 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 
   <section class="way" id="way">
     <div class="wrap">
-      <div>
-        <div class="sec-head" style="margin-bottom:24px">
-          <h2>오시는 길</h2>
+      <div class="center">
+        <h2 class="eyebrow-title">오시는 길</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="cols">
+        <div>
+          <address>
+            세종 조치원읍 세종로 2427, 1층
+            <small>지번 · 조치원읍 침산리 45-5</small>
+          </address>
+          <ul class="near">
+            <li><span>고려대학교 세종캠퍼스</span><span>1분</span></li>
+            <li><span>신봉초등학교</span><span>1분</span></li>
+            <li><span>도도리파크</span><span>2분</span></li>
+            <li><span>세종시민운동장</span><span>4분</span></li>
+            <li><span>조치원역 · 세종전통시장</span><span>5분</span></li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://map.naver.com/p/entry/place/1599470154" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+          </div>
         </div>
-        <address>
-          세종 조치원읍 세종로 2427, 1층
-          <small>지번 · 조치원읍 침산리 45-5</small>
-        </address>
-        <ul class="near">
-          <li><span>고려대학교 세종캠퍼스</span><span>1분</span></li>
-          <li><span>신봉초등학교</span><span>1분</span></li>
-          <li><span>도도리파크</span><span>2분</span></li>
-          <li><span>세종시민운동장</span><span>4분</span></li>
-          <li><span>조치원역 · 세종전통시장</span><span>5분</span></li>
-        </ul>
-        <div class="cta">
-          <a class="btn fill" href="https://map.naver.com/p/entry/place/1599470154" target="_blank" rel="noopener">네이버 지도에서 보기</a>
-          <a class="btn" href="tel:0507-1343-0929">전화 문의</a>
+        <div class="map">
+          <iframe title="1972 송은정 보리밥 본점 위치 지도" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=127.2842%2C36.6012%2C127.2942%2C36.6068&amp;layer=mapnik&amp;marker=36.6039736%2C127.2892084"></iframe>
         </div>
       </div>
-      <div class="map">
-        <iframe title="1972 송은정 보리밥 본점 위치 지도" loading="lazy"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=127.2842%2C36.6012%2C127.2942%2C36.6068&amp;layer=mapnik&amp;marker=36.6039736%2C127.2892084"></iframe>
+    </div>
+  </section>
+
+  <section class="reserve center" id="reserve">
+    <div class="wrap">
+      <h2 class="eyebrow-title">예약과 문의</h2>
+      <div class="rule"></div>
+      <p class="lead">네이버 예약으로 자리를 잡아 두시거나 전화로 문의해 주세요.</p>
+      <p class="tel num">0507-1343-0929</p>
+      <div class="btns">
+        <a class="btn green" href="https://m.booking.naver.com/booking/6/bizes/1579162" target="_blank" rel="noopener">네이버로 예약</a>
+        <a class="btn" href="tel:0507-1343-0929">전화 걸기</a>
       </div>
     </div>
   </section>
@@ -413,16 +489,20 @@ footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 
 <footer>
   <div class="wrap">
-    <div>
-      <strong>1972 송은정 보리밥 본점</strong><br>
-      세종 조치원읍 세종로 2427, 1층 · <span class="num">0507-1343-0929</span>
+    <div class="social">
+      <a href="https://www.instagram.com/songbori72" target="_blank" rel="noopener" aria-label="인스타그램">IG</a>
+      <a href="https://smartstore.naver.com/songbori" target="_blank" rel="noopener" aria-label="반찬 스마트스토어">반찬</a>
+      <a href="https://m.place.naver.com/restaurant/1599470154/home" target="_blank" rel="noopener" aria-label="네이버 플레이스">N</a>
     </div>
-    <div class="links">
-      <a href="https://www.instagram.com/songbori72" target="_blank" rel="noopener">인스타그램</a>
-      <a href="https://smartstore.naver.com/songbori" target="_blank" rel="noopener">반찬 스마트스토어</a>
-      <a href="https://m.place.naver.com/restaurant/1599470154/home" target="_blank" rel="noopener">네이버 플레이스</a>
+    <div class="fnav">
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#visit">방문 안내</a>
+      <a href="#way">오시는 길</a>
     </div>
+    <p class="addr">1972 송은정 보리밥 본점<br>세종 조치원읍 세종로 2427, 1층 · <span class="num">0507-1343-0929</span></p>
   </div>
+  <div class="greenbar">매일 <span class="num">09:30 – 20:30</span> · 쉬는 시간 <span class="num">15:30 – 17:00</span></div>
 </footer>
 
 </body>
