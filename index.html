@@ -7,7 +7,7 @@
 <meta name="description" content="블루리본 서베이 2026 선정. 세종 조치원 보리밥 한상차림. 보리밥과 찌개, 18가지 찬, 무제한 셀프바. 매일 09:30부터 아침식사 가능.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&family=Nanum+Myeongjo:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Nanum+Myeongjo:wght@400;700;800&display=swap">
 <style>
 /* 레이아웃: 짙은 숯색 머리띠와 가운데 문장(紋章), 화면 폭을 다 쓰는 음식 사진 띠와 가운데 정렬 글 띠를 번갈아 쌓는다. */
 :root {
@@ -22,7 +22,8 @@
   --ribbon: #1d4fa0;       /* 블루리본 */
   --ribbon-dark: #153a78;
   --line: rgba(43, 41, 39, .16);
-  --head: "Gothic A1", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --head: "Nanum Myeongjo", "Batang", "AppleMyungjo", serif;
+  --disp: "Song Myung", "Nanum Myeongjo", "Batang", serif;
   --quote: "Nanum Myeongjo", "Batang", serif;
   --wrap: 1080px;
 }
@@ -70,9 +71,9 @@ p { margin: 0; }
 .crest { text-decoration: none; text-align: center; border: 2px solid var(--white); padding: 8px 20px 9px; position: relative; display: block; }
 .crest::before { content: ""; position: absolute; inset: 3px; border: 1px solid rgba(255,255,255,.45); pointer-events: none; }
 .crest small { display: block; font-size: .7rem; letter-spacing: .5em; text-indent: .5em; line-height: 1.4; color: #cfd8b8; }
-.crest b { display: block; font-weight: 900; font-size: 1.3rem; letter-spacing: .14em; text-indent: .14em; line-height: 1.25; }
+.crest b { display: block; font-family: var(--disp); font-weight: 400; font-size: 1.3rem; letter-spacing: .14em; text-indent: .14em; line-height: 1.25; }
 .crest i { display: block; font-style: normal; font-size: .62rem; letter-spacing: .4em; text-indent: .4em; line-height: 1.5; opacity: .8; }
-.nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 34px; padding-block: 8px 16px; font-size: .86rem; font-weight: 700; letter-spacing: .18em; }
+.nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 34px; padding-block: 8px 16px; font-size: .86rem; font-family: var(--disp); font-weight: 400; letter-spacing: .18em; }
 .nav a { text-decoration: none; padding: 2px 0; border-bottom: 2px solid transparent; }
 .nav a:hover { border-bottom-color: var(--barley); }
 
@@ -84,9 +85,9 @@ p { margin: 0; }
 .hero .inner { width: 100%; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 40px; }
 .award { display: flex; align-items: center; gap: 16px; flex: 0 0 100%; margin-bottom: 0; }
 .award svg { width: 78px; height: auto; flex: none; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); }
-.award b { display: block; font-weight: 900; font-size: 1.15rem; letter-spacing: .04em; line-height: 1.4; }
+.award b { display: block; font-family: var(--disp); font-weight: 400; font-size: 1.15rem; letter-spacing: .04em; line-height: 1.4; }
 .award div > span { display: block; font-size: .88rem; opacity: .88; line-height: 1.5; }
-.hero h1 { font-weight: 900; font-size: clamp(2.1rem, 5vw, 3.5rem); letter-spacing: .02em; line-height: 1.25; text-shadow: 0 2px 18px rgba(0,0,0,.6); }
+.hero h1 { font-family: var(--disp); font-weight: 400; font-size: clamp(2.1rem, 5vw, 3.5rem); letter-spacing: .02em; line-height: 1.25; text-shadow: 0 2px 18px rgba(0,0,0,.6); }
 .hero p.lede { margin-top: 20px; font-size: 1.05rem; opacity: .92; max-width: 28em; }
 .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 8px; }
 
@@ -95,13 +96,13 @@ p { margin: 0; }
 .proof ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
 .proof li { padding: 22px 16px; text-align: center; border-left: 1px solid rgba(255,255,255,.22); }
 .proof li:first-child { border-left: 0; }
-.proof b { display: block; font-weight: 900; font-size: 1.2rem; letter-spacing: .04em; line-height: 1.4; }
+.proof b { display: block; font-family: var(--disp); font-weight: 400; font-size: 1.2rem; letter-spacing: .04em; line-height: 1.4; }
 .proof li > span { display: block; font-size: .85rem; opacity: .85; line-height: 1.5; }
 
 /* 글 띠 공통 */
 section { padding-block: 84px; }
 .center { text-align: center; }
-.eyebrow-title { font-weight: 900; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: .16em; text-indent: .16em; }
+.eyebrow-title { font-family: var(--disp); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: .16em; text-indent: .16em; }
 .rule { width: 44px; height: 3px; background: var(--barley); margin: 18px auto 0; }
 .quote { font-family: var(--quote); font-size: 1.25rem; color: var(--ink); margin-top: 26px; }
 .lead { max-width: 38em; margin: 16px auto 0; color: var(--ink-soft); }
@@ -109,7 +110,7 @@ section { padding-block: 84px; }
 /* 우리의 밥상 */
 .believe { background: var(--paper); }
 .points { list-style: none; margin: 52px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
-.points b { display: block; font-weight: 900; font-size: 1.05rem; letter-spacing: .2em; text-indent: .2em; color: var(--barley-dark); }
+.points b { display: block; font-family: var(--disp); font-weight: 400; font-size: 1.05rem; letter-spacing: .2em; text-indent: .2em; color: var(--barley-dark); }
 .points span { display: block; margin-top: 8px; font-size: .93rem; color: var(--ink-soft); line-height: 1.7; }
 .points li { padding-top: 22px; border-top: 1px solid var(--line); }
 
@@ -119,18 +120,18 @@ section { padding-block: 84px; }
 .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(20,18,16,.85) 0%, rgba(20,18,16,.55) 45%, rgba(20,18,16,.1) 80%); }
 .band .wrap { position: relative; z-index: 1; padding-block: 92px; display: flex; justify-content: flex-end; }
 .band .inner { max-width: 420px; text-align: right; }
-.band h2 { font-weight: 900; font-size: clamp(1.6rem, 3.6vw, 2.3rem); letter-spacing: .04em; }
+.band h2 { font-family: var(--disp); font-weight: 400; font-size: clamp(1.6rem, 3.6vw, 2.3rem); letter-spacing: .04em; }
 .band p { margin-top: 12px; opacity: .9; }
 .band .btn { margin-top: 24px; }
 
 /* 메뉴 */
 .mains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 52px; text-align: center; }
 .dish img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.dish h3 { font-size: 1.15rem; font-weight: 900; letter-spacing: .06em; margin-top: 18px; }
+.dish h3 { font-size: 1.15rem; font-family: var(--disp); font-weight: 400; letter-spacing: .06em; margin-top: 18px; }
 .dish .tag { font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: var(--barley-dark); border: 1px solid var(--barley); padding: .1em .55em; margin-left: .5em; vertical-align: .15em; white-space: nowrap; }
 .dish .price { font-weight: 700; color: var(--barley-dark); margin-top: 2px; }
 .dish p.desc { margin-top: 6px; font-size: .92rem; color: var(--ink-soft); line-height: 1.65; }
-.sub-title { font-weight: 900; font-size: 1.05rem; letter-spacing: .3em; text-indent: .3em; text-align: center; margin: 68px 0 14px; }
+.sub-title { font-family: var(--disp); font-weight: 400; font-size: 1.05rem; letter-spacing: .3em; text-indent: .3em; text-align: center; margin: 68px 0 14px; }
 .sides { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 48px; border-top: 1px solid var(--line); }
 .sides li { display: grid; grid-template-columns: 76px 1fr auto; gap: 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .sides img { width: 76px; height: 76px; object-fit: cover; border-radius: 50%; }
@@ -142,7 +143,7 @@ section { padding-block: 84px; }
 /* 손님 평가 */
 .voice { background: var(--paper); }
 .voice .cols { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; margin-top: 48px; }
-.score { font-weight: 900; font-size: 4.4rem; line-height: 1; color: var(--ribbon); text-align: center; }
+.score { font-family: var(--disp); font-weight: 400; font-size: 4.4rem; line-height: 1; color: var(--ribbon); text-align: center; }
 .score small { font-size: 1.2rem; color: var(--ink-soft); font-weight: 400; }
 .voice .src { margin-top: 14px; font-size: .88rem; color: var(--ink-soft); text-align: center; line-height: 1.7; }
 .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
@@ -153,7 +154,7 @@ section { padding-block: 84px; }
 
 /* 방문 안내 */
 .visit .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 52px; }
-.visit h3 { font-size: .95rem; font-weight: 900; letter-spacing: .24em; color: var(--barley-dark); padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 16px; }
+.visit h3 { font-size: .95rem; font-family: var(--disp); font-weight: 400; letter-spacing: .24em; color: var(--barley-dark); padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 16px; }
 .visit dl { margin: 0; display: grid; grid-template-columns: 5.5em 1fr; row-gap: 8px; }
 .visit dt { font-weight: 700; }
 .visit dd { margin: 0; color: var(--ink-soft); }
@@ -163,7 +164,7 @@ section { padding-block: 84px; }
 /* 오시는 길 */
 .way { background: var(--paper); }
 .way .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px; }
-.way address { font-style: normal; font-weight: 900; font-size: 1.3rem; line-height: 1.5; }
+.way address { font-style: normal; font-family: var(--disp); font-weight: 400; font-size: 1.3rem; line-height: 1.5; }
 .way address small { display: block; font-weight: 400; font-size: .9rem; color: var(--ink-soft); }
 .near { list-style: none; margin: 24px 0 0; padding: 0; }
 .near li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-top: 1px solid var(--line); }
@@ -174,12 +175,12 @@ section { padding-block: 84px; }
 
 /* 예약 띠 */
 .reserve .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
-.reserve .tel { font-weight: 900; font-size: 1.6rem; letter-spacing: .04em; margin-top: 22px; }
+.reserve .tel { font-family: var(--disp); font-weight: 400; font-size: 1.6rem; letter-spacing: .04em; margin-top: 22px; }
 
 /* 바닥 */
 footer { background: var(--char); color: #d9d5cf; text-align: center; padding-top: 48px; font-size: .9rem; }
 .social { display: flex; justify-content: center; gap: 12px; }
-.social a { width: 44px; height: 44px; border-radius: 50%; background: var(--barley); color: var(--white); display: grid; place-items: center; text-decoration: none; font-weight: 900; font-size: .78rem; letter-spacing: .02em; }
+.social a { width: 44px; height: 44px; border-radius: 50%; background: var(--barley); color: var(--white); display: grid; place-items: center; text-decoration: none; font-family: var(--disp); font-weight: 400; font-size: .78rem; letter-spacing: .02em; }
 .social a:hover { background: var(--white); color: var(--char); }
 footer .fnav { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 28px; margin-top: 26px; font-weight: 700; letter-spacing: .18em; font-size: .82rem; color: var(--white); }
 footer .fnav a { text-decoration: none; }
@@ -247,8 +248,8 @@ footer .greenbar { background: var(--barley); color: var(--white); padding: 12px
             <circle cx="40" cy="40" r="38" fill="#1d4fa0"/>
             <circle cx="40" cy="40" r="38" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 5"/>
             <circle cx="40" cy="40" r="29" fill="#ffffff"/>
-            <text x="40" y="35" text-anchor="middle" font-family="Gothic A1, Malgun Gothic, sans-serif" font-weight="900" font-size="9.5" fill="#153a78">블루리본</text>
-            <text x="40" y="52" text-anchor="middle" font-family="Gothic A1, Malgun Gothic, sans-serif" font-weight="900" font-size="15" fill="#1d4fa0">2026</text>
+            <text x="40" y="35" text-anchor="middle" font-family="Nanum Myeongjo, Batang, serif" font-weight="800" font-size="9.5" fill="#153a78">블루리본</text>
+            <text x="40" y="52" text-anchor="middle" font-family="Nanum Myeongjo, Batang, serif" font-weight="800" font-size="15" fill="#1d4fa0">2026</text>
           </svg>
           <div>
             <b>블루리본 서베이 2026 선정</b>
